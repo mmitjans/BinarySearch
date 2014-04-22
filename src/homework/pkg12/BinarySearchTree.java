@@ -226,6 +226,9 @@ public class BinarySearchTree<Key extends Comparable<Key>, T> {
     {
         if (key == null) {
             return node;
+        } else if(node == null)
+        {
+            throw new RuntimeException("Could not find key to delete");
         }
 
         int comparisonResult = compareValues(key, node.key);

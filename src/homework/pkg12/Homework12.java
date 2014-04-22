@@ -18,19 +18,17 @@ public class Homework12
         binarySearch.insert(9, 22);
         binarySearch.insert(1, 11);
         
-        //binarySearch.printTree();
+        binarySearch.deleteKeys(1, 3);
         
-        binarySearch.delete(3);
+        try {
+            binarySearch.delete(0);
+        } catch(RuntimeException exception)
+        {
+            
+        }
         
         binarySearch.printTree();
         
-        System.out.println("Contains " + binarySearch.containsKey(2));
-        System.out.println("Minimum value: " + binarySearch.getMin());
-        System.out.println("Get value: " + binarySearch.get(4));
-        
-        binarySearch.deleteKeys(0, 3);
-       
-        binarySearch.printTree();
     }
     
 }
